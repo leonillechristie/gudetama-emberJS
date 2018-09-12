@@ -1,0 +1,26 @@
+<article class="listing" style="margin-left: 15%; margin-top: 0px!important;">
+    <a {{action 'toggleImageSize'}} class="image {{if isWide "wide"}}">
+        <img src="{{product.image}}" alt="">
+        <small>View Larger</small>
+    </a>
+    <h3>{{#link-to "products.show" product class=product.id}}{{product.title}}{{/link-to}}</h3>
+    <div class="detail location">
+        <span>Item Origin:</span> {{product.city}}
+    </div>
+    <div class="detail type">
+        <span>Type:</span> {{product-item-type product.category}}
+        - {{product.category}}
+    </div>
+    <div class="detail bedrooms">
+        <span>Price:</span> PHP {{product.price}}
+    </div>
+    <div class="detail owner">
+        <span>Description:</span> {{product.owner}}
+    </div>
+    <div class="detail bedrooms">
+        {{#link-to "products.show" product}}<button class="button" style="position: absolute; right: 20%;top: 40%;">View Item</button>{{/link-to}}
+    </div>
+
+</article>
+
+<br><br>

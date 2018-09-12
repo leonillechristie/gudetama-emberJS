@@ -1,0 +1,44 @@
+<div class="jumbo show-listing" style="margin-top: 0px!important;">
+    <h2 class="title">{{model.title}}</h2>
+    <div class="right detail-section" style=" width: 700px; margin-right: 10%;">
+        <h4>Product Information</h4>
+        <div class="detail owner">
+            <strong>Owner:</strong> {{model.owner}}
+        </div>
+        <div class="detail">
+            <strong>Type:</strong> {{product-item-type model.category}} - {{model.category}}
+        </div>
+        <div class="detail">
+            <strong>Item Origin:</strong> {{model.city}}
+        </div>
+        <div class="detail">
+            <strong>Item Price:</strong> PHP {{model.price}}
+        </div>
+        <div class="detail">
+            <strong>Product Description:</strong>
+            <p class="description" style="text-align: justify;">{{model.description}}</p>
+        </div>
+
+        <div style="margin-top: 20px; float:right;">
+        {{#link-to "products" class="button" style="color:yellow!important;"}}
+            Back to List
+        {{/link-to}}
+        </div>
+    </div>
+    <img src="{{model.image}}" class="product-pic">
+</div>
+
+<br><br>
+
+<div class="">
+    <div class="menu footer-cust">
+        <div class="links">
+            <p style="color:white;display: table-cell;">Copyright 2018</p>
+        </div>
+        {{#link-to "landing"}}
+            <h1>
+                <em>Gudetama Store</em>
+            </h1>
+        {{/link-to}}
+    </div>
+</div>

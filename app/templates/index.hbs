@@ -1,0 +1,25 @@
+import Route from '@ember/routing/route';
+export default Route.extend({
+beforeModel() {
+    this.replaceWith('products');
+}
+});
+
+{{#each model as |product|}}
+    <article class="listing">
+        <h3>{{product.title}}</h3>
+        <div class="detail owner">
+            <span>Owner:</span> {{product.owner}}
+        </div>
+        <div class="detail type">
+            <span>Type:</span> {{product.category}}
+        </div>
+        <div class="detail location">
+            <span>Item Origin:</span> {{product.city}}
+        </div>
+        <div class="detail bedrooms">
+            <span>Price:</span> {{product.price}}
+        </div>
+    </article>
+{{/each}}
+
