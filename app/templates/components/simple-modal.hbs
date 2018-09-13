@@ -1,0 +1,13 @@
+{{#if enabled}}
+    <div {{action 'toggleModal'}} class="modal-fog">
+        <div class="modal-frame" style="position: absolute; top: 30%; left: 40%;border: 1px solid #d8b241; background: #d8b241; height: 300px; width: 500px;">
+            <div class="modal-title">
+                {{title}}
+                <img style="float: right;position: absolute;font-size: 1.1em;right: 12px;top: 10px;height: 20px;cursor: pointer;" src="https://cdn3.iconfinder.com/data/icons/black-easy/512/538357-wrong_512x512.png">
+            </div>
+            <div class="modal-body">
+                {{yield}}
+            </div>
+        </div>
+    </div>
+{{/if}}

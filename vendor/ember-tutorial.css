@@ -364,3 +364,57 @@ p {
     font-size: 40px!important;
     padding: 20px 80px;
 }
+
+.login-btnin {
+    background-color: #212529; 
+    padding: 15px 50px !important; 
+    border-radius: 10px;
+}
+
+/* Modal */
+
+.modal-fog {
+  background: rgba(30, 30, 30, 0.5);
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+}
+.modal-frame {
+  position: absolute;
+  top: 10%;
+  left: 20%;
+  border: 1px solid #333;
+  background: #ddd;
+  height: 350px!important;
+  width: 500px!important;
+  border-radius: 15px;
+}
+.modal-title {
+    border-bottom: 2px solid #00000047;
+    font-size: 1.3em;
+    padding: 30px;
+    font-weight: bold;
+    text-align: center;
+    line-height: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 30px;
+    margin-bottom: 0;
+}
+.modal-body {
+    margin-top: 70px;
+    padding: 20px;
+    overflow: hidden;
+    height: 250px;
+    text-align: center;
+}
+
+.modal-btn {
+    border-radius: 10px!important; 
+    color: white!important; 
+    background-color: #d8a305!important; 
+    top: 7px!important;
+}

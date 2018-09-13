@@ -1,7 +1,7 @@
 <article class="listing" style="margin-left: 15%; margin-top: 0px!important;">
     <a {{action 'toggleImageSize'}} class="image {{if isWide "wide"}}">
         <img src="{{product.image}}" alt="">
-        <small>View Larger</small>
+        <small>Click to enlarge</small>
     </a>
     <h3>{{#link-to "products.show" product class=product.id}}{{product.title}}{{/link-to}}</h3>
     <div class="detail location">
