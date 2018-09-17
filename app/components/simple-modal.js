@@ -9,6 +9,20 @@ export default Component.extend({
     actions: {
         toggleModal: function() {
             this.toggleProperty('enabled');
+        },
+        formSubmit: function() {
+            $.ajax({
+                method: 'POST',
+                data: {
+                    email: 'test@app.local',
+                    password: 'secret'
+                },
+                contentType: "application/json",
+                dataType: "json",
+                complete: function(response) {
+                    console.log(response);
+                }
+            });
         }
     },
 });

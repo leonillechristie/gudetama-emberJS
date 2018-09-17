@@ -22,6 +22,7 @@ export default function() {
         title: "Gudetama Butt",
         owner: "Sanrio Ltd.",
         city: "Singapore",
+
         category: "Sticker",
         price: 10,
         image: "https://i1.wp.com/ilooklikethis.com/wp-content/uploads/2017/08/gudetama-9-e1503461031143.png?resize=304%2C333&ssl=1",
@@ -85,3 +86,4 @@ export default function() {
     return { data: products.find((product) => request.params.id === product.id) };
   });
 }
+
