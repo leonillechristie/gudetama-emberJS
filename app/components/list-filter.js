@@ -18,6 +18,7 @@ export default Component.extend({
       filterAction(filterInputValue).then((filterResults) => {
         if (filterResults.query === this.value) {
           this.set('results', filterResults.results);
+
         }
       });
     }

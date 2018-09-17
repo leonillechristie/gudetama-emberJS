@@ -14,8 +14,8 @@ export default Component.extend({
             $.ajax({
                 method: 'POST',
                 data: {
-                    email: 'test@app.local',
-                    password: 'secret'
+                    email: 'email',
+                    password: 'password'
                 },
                 contentType: "application/json",
                 dataType: "json",

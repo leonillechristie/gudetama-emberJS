@@ -1,13 +1,13 @@
 import Controller from '@ember/controller';
 
 export default Controller.extend({
+    router: Ember.inject.service(),
     actions: {
         openModal: function(target) {
             var modal = this.get('comp-' + target);
             modal.send('toggleModal');
         },
         formSubmit: function() {
-            console.log(this)
             $.ajax({
             	url: 'http://localhost:8000/api/v1/login/',
                 method: 'POST',
@@ -19,13 +19,12 @@ export default Controller.extend({
                 success: function(response) {
                     if (response.authenticated != true) {
                         // show errors
-                        alert('Invalid Credentials');
+                        alert('Invalid Username/password');
+                    }else {
+                        // successful login
+                        alert('Login Successful');
+                        window.location.replace("/products");
                     }
-                    // else {
-                    //     this.route('products', function() {
-                    //         this.route('products', { path: '/products' });
-                    //     });
-                    // }
                 }
             });
         }
