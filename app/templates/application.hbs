@@ -19,14 +19,14 @@
 
     <div style="float:right;">
       {{#simple-modal enabled=false title="Login To Your Account" id="modal-main"}}
-        <label for="uname"><b>Username</b></label> <br>
-        <input type="text" style="overflow: hidden;width: 350px; height: 35px; border-radius: 10px; text-align: center; border-style: solid; border-color: white;" placeholder="Enter Username" name="uname" required=""><br>
-
+        <label for="uname"><b>E-mail Address</b></label> <br>
+        {{input type="text" class="modal-input" placeholder="Enter E-mail" value=email}}
+        <br>
         <label for="psw" style="margin-top: 15px;"><b>Password</b></label> <br>
-        <input style="overflow: hidden;width: 350px; height: 35px; border-radius: 10px; text-align: center; border-style: solid; border-color: white;" type="password" placeholder="Enter Password" name="psw" required="">
+        {{input type="password" value=password class="modal-input" placeholder="Enter Password"}}
         <br><br>
 
-        <img src="https://mbtskoudsalg.com/images/gudetama-png.png" style="height: 150px; position:  absolute; left: -35px; top: 130px;">
+        <img src="https://mbtskoudsalg.com/images/gudetama-png.png" class="modal-img">
 
         <button class="button modal-btn" {{action 'formSubmit' 'modal-main'}}>Login</button>
 

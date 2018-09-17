@@ -418,3 +418,20 @@ p {
     background-color: #d8a305!important; 
     top: 7px!important;
 }
+
+.modal-input {
+    overflow: hidden;
+    width: 350px; 
+    height: 35px; 
+    border-radius: 10px; 
+    text-align: center; 
+    border-style: solid; 
+    border-color: white;
+}
+
+.modal-img {
+    height: 150px; 
+    position:  absolute; 
+    left: -35px; 
+    top: 130px;
+}

@@ -7,17 +7,25 @@ export default Controller.extend({
             modal.send('toggleModal');
         },
         formSubmit: function() {
+            console.log(this)
             $.ajax({
-            	url: 'http://localhost:8000/api/v1/login',
+            	url: 'http://localhost:8000/api/v1/login/',
                 method: 'POST',
                 data: {
-                    email: 'test@app.local',
-                    password: 'secret'
+                    email: this.email,
+                    password: this.password
                 },
-                contentType: "application/json",
-                dataType: "json",
-                complete: function(response) {
-                    console.log(response);
+                contentType: "application/x-www-form-urlencoded",
+                success: function(response) {
+                    if (response.authenticated != true) {
+                        // show errors
+                        alert('Invalid Credentials');
+                    }
+                    // else {
+                    //     this.route('products', function() {
+                    //         this.route('products', { path: '/products' });
+                    //     });
+                    // }
                 }
             });
         }
