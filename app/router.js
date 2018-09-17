@@ -13,6 +13,7 @@ Router.map(function() {
   	this.route('show', { path: '/:product_id' });
   });
   this.route('landing');
+  this.route('cart');
 });
 
 export default Router;
