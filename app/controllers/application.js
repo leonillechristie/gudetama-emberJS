@@ -19,10 +19,10 @@ export default Controller.extend({
                 success: function(response) {
                     if (response.authenticated != true) {
                         // show errors
-                        alert('Invalid Username/password');
+                        alert("Invalid Username/Password!");
                     }else {
                         // successful login
-                        alert('Login Successful');
+                        alert("Login Successful!");
                         window.location.replace("/products");
                     }
                 }
