@@ -23,8 +23,9 @@ export default Controller.extend({
         url: 'http://localhost:8000/api/v1/update',
           method: 'PUT',
           data: {
-            // reserved word name ?
               name: this.name,
+              // name: this.attributes["name"].value,
+              // name: $(this).attr("name"),
               email: this.email,
               password: this.password
           },
