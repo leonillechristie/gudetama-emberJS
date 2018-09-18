@@ -1,0 +1,10 @@
+<div class="" style="margin-bottom: 10px;">
+	<td style="width: 272px;text-align: center;vertical-align: inherit;">{{user.userid}}</td>
+	<td style="width: 238px;text-align: center;vertical-align: inherit;">{{user.name}}</td>
+	<td style="width: 470px;text-align: center;vertical-align: inherit;">{{user.email}}</td>
+	<td style="width: 420px;text-align: center;vertical-align: inherit;">
+		{{#link-to "users.show" user}}<button class="button" style="background-color: #2e9e37!important;">View</button>{{/link-to}}
+		{{#link-to "users.update" user}}<button class="button">Update</button>{{/link-to}}
+		{{#link-to "users.show" user}}<button class="button" style="background-color: #9a2b2b!important;">Delete</button>{{/link-to}}
+	</td>
+</div>

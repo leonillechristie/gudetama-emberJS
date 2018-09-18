@@ -8,32 +8,36 @@
     <thead>
       <tr>
         <th>Product Name</th>
+        <th>Product Description</th>
         <th>Product Price</th>
         <th>Action</th>
       </tr>
     </thead>
     <tbody>
       <tr>
-        <td>Gudetama Butt</td>
-        <td>PHP 12</td>
+        <td>{{model.title}}</td>
+        <td>{{model.description}}</td>
+        <td>{{model.price}}</td>
         <td><button class="button modal-btn">Remove from Cart</button></td>
       </tr>
       <tr>
         <td>Sling Bag</td>
+        <td>Lorem ipsum sit dolor amet </td>
         <td>PHP 1250</td>
         <td><button class="button modal-btn">Remove from Cart</button></td>
       </tr>
       <tr>
         <td>Gudetama Mug</td>
+        <td>Lorem ipsum sit dolor amet </td>
         <td>PHP 550</td>
         <td><button class="button modal-btn">Remove from Cart</button></td>
       </tr>
     </tbody>
   </table>
 
-  <h3 style="margin: 20px 50px;">Total: </h3>
+  <h3 style="margin: 20px 50px;">Total: PHP 1812</h3>
 
-  <button class="button modal-btn" style="margin: 0px 50px;">Complete Transaction</button>
+  <button class="button modal-btn" style="margin: 0px 50px; font-size: 1.5em;">Complete Transaction</button>
 </div>
 
 <div class="">

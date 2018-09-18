@@ -14,6 +14,11 @@ Router.map(function() {
   });
   this.route('landing');
   this.route('cart');
+  this.route('users', function() {
+    this.route('show', { path: '/:user_id' });
+    this.route('edit', { path: '/:user_id/edit'});
+    this.route('update', { path: '/:user_id/edit'});
+  });
 });
 
 export default Router;

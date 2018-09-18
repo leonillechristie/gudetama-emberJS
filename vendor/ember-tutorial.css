@@ -446,3 +446,50 @@ p {
     height: 300px; 
     width: 500px;
 }
+
+/* User profile */
+
+.user-pic {
+    height: 400px;
+    width: auto;
+    margin-top: -50px;
+    border: 1px solid #f7b64c;
+    margin-left: 300px;
+}
+
+.show-btn {
+     float: right!important; 
+     margin-top: 20px!important;
+}
+
+/* User List */
+
+.search-user {
+    padding: 0px 15px!important;
+}
+
+/* Show Product */
+
+.show-btn2 {
+    margin-right: 20px!important; 
+}
+
+/* Update User */
+
+.update-input {
+    border-radius: 10px;
+    padding: 5px 10px;
+    width: 300px;
+    border: solid 1px #f7b64c;
+}
+
+.btn-update {
+    float: right;
+    font-size: 20px;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+.btn-nohover {
+    color: white!important;
+}

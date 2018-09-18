@@ -1,0 +1,9 @@
+<div class="row" style="display:  inline-flex;margin-left: 25%;">
+    <h4 style="align-self: center; padding-right: 25px;"> User Search: </h4>
+    {{input value=value
+        key-up=(action 'handleFilterEntry')
+        class="light search-user"
+        placeholder="Input User to Search"}}
+</div>
+
+{{yield results}}

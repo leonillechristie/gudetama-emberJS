@@ -1,0 +1,39 @@
+{{#user-filter
+        filter=(action 'filterByName')
+as |filteredResults|}}
+
+<br><br>
+ <article class="listing" style="margin-top: 0px!important;width: 1500px;margin-left: 150px;">
+    <table class="table table-hover" style="text-align:center;">
+       <thead>
+            <th>User ID</th>
+            <th>Name</th>
+            <th>E-mail Address</th>
+            <th style="width:30%;">Action</th>
+        </thead> 
+        <tbody class="">
+         </tbody>
+    </table>
+            {{#each filteredResults as |userPerson|}}
+                {{user-listing user=userPerson}}
+            {{/each}}
+       
+  </article>
+
+{{/user-filter}}
+{{outlet}}
+
+  
+
+<div class="">
+    <div class="menu footer-cust">
+        <div class="links">
+            <p style="color:white;display: table-cell;">Copyright 2018</p>
+        </div>
+        {{#link-to "landing"}}
+            <h1>
+                <em>Gudetama Store</em>
+            </h1>
+        {{/link-to}}
+    </div>
+</div>
