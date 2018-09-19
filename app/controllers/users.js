@@ -31,15 +31,14 @@ export default Controller.extend({
           },
           contentType: "application/x-www-form-urlencoded",
           success: function(response) {
-              if (response.authenticated != true) {
-                  alert("Cannot have empty fields!");
-              }else {
-                  alert("Update Successful!");
-                  window.location.replace("/users");
-              }
+            if (response.authenticated != true) {
+                alert("Cannot have empty fields!");
+            }else {
+                alert("Update Successful!");
+                window.location.replace("/users");
+            }
           }
       });
-
     }
   }
 });
