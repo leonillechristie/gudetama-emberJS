@@ -18,14 +18,14 @@ export default Controller.extend({
     updateUser: function() {
       alert('users');
       console.log('ádsfasfd');
+      console.log(this.model.userid);
 
+      var id = this.model.userid;
       $.ajax({
-        url: 'http://localhost:8000/api/v1/update',
+        url: 'http://localhost:8000/api/v1/user/'+ id,
           method: 'PUT',
           data: {
               name: this.name,
-              // name: this.attributes["name"].value,
-              // name: $(this).attr("name"),
               email: this.email,
               password: this.password
           },
@@ -35,7 +35,7 @@ export default Controller.extend({
                 alert("Cannot have empty fields!");
             }else {
                 alert("Update Successful!");
-                window.location.replace("/users");
+                window.location.replace("/users/" + id);
             }
           }
       });
