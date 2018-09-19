@@ -27,6 +27,9 @@ export default Controller.extend({
               name: this.model.name,
               email: this.model.email,
               password: this.model.password
+              // name: this.name,
+              // email: this.email,
+              // password: this.password
           },
           contentType: "application/x-www-form-urlencoded",
           success: function(response) {

@@ -9,7 +9,7 @@
       {{#link-to "products" class="menu-about"}}
         Products
       {{/link-to}}
-      {{#link-to "cart" class="menu-about"}}
+      {{#link-to "cart" class="menu-about" }}
         Cart
       {{/link-to}}
       {{#link-to "about" class="menu-about"}}
@@ -31,11 +31,8 @@
         <label for="psw" style="margin-top: 15px;"><b>Password</b></label> <br>
         {{input type="password" value=password class="modal-input" placeholder="Enter Password"}}
         <br><br>
-
         <img src="https://mbtskoudsalg.com/images/gudetama-png.png" class="modal-img">
-
         <button class="button modal-btn" {{action 'formSubmit' 'modal-main'}}>Login</button>
-
       {{/simple-modal}}
       
       <button class="button modal-btn" {{action 'openModal' 'modal-main'}}>Login</button>
