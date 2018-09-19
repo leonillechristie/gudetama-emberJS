@@ -27,22 +27,23 @@ export default Controller.extend({
                     }
                 }
             });
+        },
+        populateUsers: function() {
+            alert('test');
+          console.log(this);
+          $.ajax({
+            url: 'http://localhost:8000/api/v1/users',
+              method: 'GET',
+              data: {
+                userid: this.userid,
+                name: this.name,
+                email: this.email
+              },
+              contentType: "application/x-www-form-urlencoded",
+              success: function(data) {
+                alert('Populate successful');
+              }
+          });
         }
-        // populateUsers() {
-        //   console.log(this);
-        //   $.ajax({
-        //     url: 'http://localhost:8000/api/v1/users',
-        //       method: 'GET',
-        //       data: {
-        //         userid: this.userid,
-        //         name: this.name,
-        //         email: this.email
-        //       },
-        //       contentType: "application/x-www-form-urlencoded",
-        //       success: function(data) {
-        //         alert('Populate successful');
-        //       }
-        //   });
-        // }
     }
 });

@@ -16,8 +16,11 @@ export default Controller.extend({
       }
     },
     updateUser: function() {
-      alert('users');
-      console.log(this.model.userid);
+      console.log(this.model);
+
+      console.log(window)
+      console.log(document)
+      console.log(document.getElementById('password').val())
 
       var id = this.model.userid;
       $.ajax({
@@ -26,7 +29,7 @@ export default Controller.extend({
           data: {
               name: this.model.name,
               email: this.model.email,
-              password: this.model.password
+              password: document.getElementById('password').val()
               // name: this.name,
               // email: this.email,
               // password: this.password
