@@ -1,29 +1,29 @@
-<div class="jumbo update-listing" style="margin-top: 0px!important;">
+<div class="jumbo update-listing show-u-div">
     <h2 class="title">User Information</h2>
-    <div class="right detail-section" style=" width: 700px; margin-right: 10%;">
+    <div class="right detail-section mg-300">
         <h3>General Information</h3>
 
         <div class="detail owner">
-	        <div style="padding: 10px 30px;" class="row">
-				<h5 style="width: 150px;">User ID: </h5> 
+	        <div class="row detail-box">
+				<h5 class="user-label">User ID: </h5> 
 				<input disabled="true" class="update-input" type="text" value={{model.userid}}>
 			</div>
 		</div>
         <div class="detail">
-            <div style="padding: 10px 30px;" class="row">
-				<h5 style="width: 150px;">User Name: </h5> 
+            <div class="row detail-box">
+				<h5 class="user-label">User Name: </h5> 
             	<input class="update-input" type="text" value={{model.name}}>
             </div>
         </div>
         <div class="detail">
-            <div style="padding: 10px 30px;" class="row">
-				<h5 style="width: 150px;">User Email: </h5> 
+            <div class="row detail-box">
+				<h5 class="user-label">User Email: </h5> 
             	<input class="update-input" type="text" value={{model.email}}>
             </div>
         </div>
         <div class="detail">
-        	<div style="padding: 10px 30px;" class="row">
-				<h5 style="width: 150px;">User Password: </h5> 
+        	<div class="row detail-box">
+				<h5 class="user-label">User Password: </h5> 
             	<input class="update-input" type="password" value={{model.password}}>
             </div>
         </div>
@@ -41,7 +41,7 @@
 <div class="">
     <div class="menu footer-cust">
         <div class="links">
-            <p style="color:white;display: table-cell;">Copyright 2018</p>
+            <p class="footer-c">Copyright 2018</p>
         </div>
         {{#link-to "landing"}}
             <h1>

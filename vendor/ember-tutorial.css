@@ -289,6 +289,8 @@ p {
 
 .show-listing .detail-section {
     width: 50%;
+    width: 700px; 
+    margin-right: 10%;
     padding-left: 30px;
 }
 
@@ -346,6 +348,11 @@ p {
   z-index: 1000;
 }
 
+.footer-c {
+    color:white;
+    display: table-cell;
+}
+
 /* About Page */
 
 .ab-content {
@@ -359,6 +366,21 @@ p {
   -moz-background-size: cover;
   background-size: cover;
   -o-background-size: cover;
+}
+
+.header-img {
+    background-image: url(https://shop.singpost.com/pub/media/weltpixel/owlcarouselslider/images/g/u/gu5th_web_banner_shopsingpost_buy_now.jpg);
+    height: 500px;
+}
+
+.yell-btn {
+    color:yellow!important;
+}
+
+.prod-div {
+    margin-top: 20px; 
+    margin-bottom: 100px; 
+    text-align: center;
 }
 
 .home-btn {
@@ -468,6 +490,18 @@ p {
     padding: 0px 15px!important;
 }
 
+.user-label {
+    width: 150px;
+}
+
+.detail-box {
+    padding: 0px 30px;
+}
+
+.show-u-div {
+    margin-top: 0px!important;
+}
+
 /* Show Product */
 
 .show-btn2 {
@@ -492,4 +526,38 @@ p {
 
 .btn-nohover {
     color: white!important;
+}
+
+/* Edit User*/
+
+.gr-btn {
+    background-color: #2e9e37!important;
+}
+
+.re-btn {
+    background-color: #9a2b2b!important;
+}
+
+.mg-10b {
+    margin-bottom: 10px;
+}
+
+.mg-300 {
+    margin-right: 300px!important;
+}
+
+.top-txt {
+    padding: 10px 80px 10px 50px!important;
+    margin-right: 250px!important;
+}
+
+/* Contact Us */
+
+.contact-img {
+    background-image: url(https://sanrio-production-weblinc.netdna-ssl.com/media/W1siZiIsIjIwMTgvMDUvMjkvMTkvMjUvMjEvNzAzL2dhbWVfcGFnZV9oZWFkZXJfYmFubmVyX0dVLmpwZyJdXQ/game-page-header-banner-GU.jpg?sha=80ebf4f692402de9);
+    height: 250px;
+}
+
+.contact-header-h {
+    margin-top: 25px!important;
 }

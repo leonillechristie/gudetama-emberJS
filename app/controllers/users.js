@@ -17,7 +17,6 @@ export default Controller.extend({
     },
     updateUser: function() {
       alert('users');
-      console.log('ádsfasfd');
       console.log(this.model.userid);
 
       var id = this.model.userid;
@@ -25,17 +24,17 @@ export default Controller.extend({
         url: 'http://localhost:8000/api/v1/user/'+ id,
           method: 'PUT',
           data: {
-              name: this.name,
-              email: this.email,
-              password: this.password
+              name: this.model.name,
+              email: this.model.email,
+              password: this.model.password
           },
           contentType: "application/x-www-form-urlencoded",
           success: function(response) {
             if (response.authenticated != true) {
-                alert("Cannot have empty fields!");
+              alert("Cannot have empty fields!");
             }else {
-                alert("Update Successful!");
-                window.location.replace("/users/" + id);
+              alert("Update Successful!");
+              window.location.replace("/users/" + id);
             }
           }
       });
