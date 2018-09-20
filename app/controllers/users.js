@@ -36,6 +36,29 @@ export default Controller.extend({
             window.location.replace("/users/" + id);
           }
       });
+    },
+    addUser: function() {
+      var userid = document.getElementById('newId').value;
+      var name = document.getElementById('newName').value;
+      var email = document.getElementById('newEmail').value;
+      // var password = document.getElementById('password').value;
+      var avatar = document.getElementById('newAvatar').value;
+
+      $.ajax({
+        url: 'http://localhost:8000/api/v1/user/',
+          method: 'POST',
+          data: {
+              userid: userid,
+              name: name,
+              email: email,
+              avatar: avatar
+          },
+          contentType: "application/x-www-form-urlencoded",
+          success: function(response) {
+            alert("User Created Successfully!");
+            window.location.replace("/users/");
+          }
+      });
     }
   }
 });

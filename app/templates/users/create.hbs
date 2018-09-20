@@ -1,0 +1,51 @@
+<div class="jumbo update-listing show-u-div">
+    <h2 class="title">Input User Information</h2>
+    <div class="right detail-section mg-300">
+        <h3>General Information</h3>
+
+        <div class="detail owner">
+	        <div class="row mb-detail detail-box">
+				<h5 class="user-label">User ID: </h5> 
+				<input class="update-input" id="newId" type="text" value={{model.userid}}>
+			</div>
+		</div>
+        <div class="detail">
+            <div class="row mb-detail detail-box">
+				<h5 class="user-label">User Name: </h5> 
+            	<input class="update-input" id="newName" type="text" value={{model.name}}>
+            </div>
+        </div>
+        <div class="detail">
+            <div class="row mb-detail detail-box">
+				<h5 class="user-label">User Email: </h5> 
+            	<input class="update-input" id="newEmail" type="text" value={{model.email}}>
+            </div>
+        </div>
+        <div class="detail">
+            <div class="row mb-detail detail-box">
+				<h5 class="user-label">User Avatar: </h5> 
+            	<input class="update-input" id="newAvatar" type="text" value={{model.avatar}}>
+            </div>
+        </div>
+
+       {{#link-to "users" class="button btn-update btn-nohover" style="color:yellow!important;"}}
+            Back to List
+        {{/link-to}}
+
+        <button class="button btn-update" style="margin-right: 20px;" {{ action 'addUser' }}> Add User</button>
+    </div>
+</div>
+<br><br>
+
+<div class="">
+    <div class="menu footer-cust">
+        <div class="links">
+            <p class="footer-c">Copyright 2018</p>
+        </div>
+        {{#link-to "landing"}}
+            <h1>
+                <em>Gudetama Store</em>
+            </h1>
+        {{/link-to}}
+    </div>
+</div>

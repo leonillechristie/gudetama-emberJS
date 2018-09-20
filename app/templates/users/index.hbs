@@ -2,6 +2,10 @@
         filter=(action 'filterByName')
 as |filteredResults|}}
 
+<div class="" style="margin-left: 300px; margin-top: -48px;">
+    {{#link-to "create" user}}<button class="button">Add User</button>{{/link-to}}
+</div>
+
 <br><br>
  <article class="listing" style="margin-top: 0px!important;width: 1500px;margin-left: 150px; margin-bottom: 100px!important;">
     <table class="table table-hover" style="text-align:center;">
@@ -14,9 +18,11 @@ as |filteredResults|}}
         <tbody class="">
          </tbody>
     </table>
-            {{#each filteredResults as |userPerson|}}
-                {{user-listing user=userPerson}}
-            {{/each}}
+
+    {{#each filteredResults as |userPerson|}}
+        {{user-listing user=userPerson}}
+    {{/each}}
+
   </article>
 
 {{/user-filter}}
