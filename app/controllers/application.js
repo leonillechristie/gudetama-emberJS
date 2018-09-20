@@ -21,7 +21,7 @@ export default Controller.extend({
                 },
                 contentType: "application/x-www-form-urlencoded",
                 success: function(response) {
-                    if (response.authenticated != true) {
+                    if (!response) {
                         alert("Invalid Username/Password!");
                     }else {
                         alert("Login Successful!");

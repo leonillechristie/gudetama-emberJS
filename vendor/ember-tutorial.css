@@ -524,6 +524,10 @@ p {
     margin-top: 20px;
 }
 
+.mb-detail {
+    margin-bottom: 10px!important;
+}
+
 .btn-nohover {
     color: white!important;
 }
