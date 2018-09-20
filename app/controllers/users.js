@@ -16,32 +16,24 @@ export default Controller.extend({
       }
     },
     updateUser: function() {
-      console.log(this.model);
-
-      console.log(window)
-      console.log(document)
-      console.log(document.getElementById('password').val())
+      console.log(this.model.email);
+      console.log(this.model.name);
 
       var id = this.model.userid;
+      var name = document.getElementById('name').value;
+      var email = document.getElementById('email').value;
+
       $.ajax({
         url: 'http://localhost:8000/api/v1/user/'+ id,
           method: 'PUT',
           data: {
-              name: this.model.name,
-              email: this.model.email,
-              password: document.getElementById('password').val()
-              // name: this.name,
-              // email: this.email,
-              // password: this.password
+              name: name,
+              email: email
           },
           contentType: "application/x-www-form-urlencoded",
           success: function(response) {
-            if (response.authenticated != true) {
-              alert("Cannot have empty fields!");
-            }else {
-              alert("Update Successful!");
-              window.location.replace("/users/" + id);
-            }
+            alert("Update Successful!");
+            window.location.replace("/users/" + id);
           }
       });
     }

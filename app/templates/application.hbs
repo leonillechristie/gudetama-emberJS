@@ -26,10 +26,10 @@
     <div style="float:right;">
       {{#simple-modal enabled=false title="Login To Your Account" id="modal-main"}}
         <label for="uname"><b>E-mail Address</b></label> <br>
-        {{input type="text" class="modal-input" placeholder="Enter E-mail" value=email}}
+        {{input type="text" class="modal-input" id="email" placeholder="Enter E-mail" value=email}}
         <br>
         <label for="psw" style="margin-top: 15px;"><b>Password</b></label> <br>
-        {{input type="password" value=password class="modal-input" placeholder="Enter Password"}}
+        {{input type="password" value=password id="password" class="modal-input" placeholder="Enter Password"}}
         <br><br>
         <img src="https://mbtskoudsalg.com/images/gudetama-png.png" class="modal-img">
         <button class="button modal-btn" {{action 'formSubmit' 'modal-main'}}>Login</button>

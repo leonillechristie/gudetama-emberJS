@@ -8,20 +8,22 @@ export default Controller.extend({
             modal.send('toggleModal');
         },
         formSubmit: function() {
+
+            var email = document.getElementById('email').value;
+            var password = document.getElementById('password').value;
+
             $.ajax({
             	url: 'http://localhost:8000/api/v1/login/',
                 method: 'POST',
                 data: {
-                    email: this.email,
-                    password: this.password
+                    email: email,
+                    password: password
                 },
                 contentType: "application/x-www-form-urlencoded",
                 success: function(response) {
                     if (response.authenticated != true) {
-                        // show errors
                         alert("Invalid Username/Password!");
                     }else {
-                        // successful login
                         alert("Login Successful!");
                         window.location.replace("/products");
                     }
