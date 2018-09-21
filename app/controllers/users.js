@@ -1,6 +1,9 @@
 import Controller from '@ember/controller';
 
 export default Controller.extend({
+  initialize() {
+    console.log(this);
+  },
   actions: {
     filterByName(param) {
       if (param !== '') {
@@ -24,7 +27,7 @@ export default Controller.extend({
       var email = document.getElementById('email').value;
 
       $.ajax({
-        url: 'http://localhost:8000/api/v1/user/'+ id,
+        url: 'http://gudetama.local:8000/api/v1/users/'+ id,
           method: 'PUT',
           data: {
               name: name,
@@ -38,17 +41,14 @@ export default Controller.extend({
       });
     },
     addUser: function() {
-      var userid = document.getElementById('newId').value;
       var name = document.getElementById('newName').value;
       var email = document.getElementById('newEmail').value;
-      // var password = document.getElementById('password').value;
       var avatar = document.getElementById('newAvatar').value;
 
       $.ajax({
-        url: 'http://localhost:8000/api/v1/user/',
+        url: 'http://gudetama.local:8000/api/v1/users/',
           method: 'POST',
           data: {
-              userid: userid,
               name: name,
               email: email,
               avatar: avatar

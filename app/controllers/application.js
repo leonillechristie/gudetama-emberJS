@@ -13,7 +13,7 @@ export default Controller.extend({
             var password = document.getElementById('password').value;
 
             $.ajax({
-            	url: 'http://localhost:8000/api/v1/login/',
+            	url: 'http://gudetama.local:8000/api/v1/login/',
                 method: 'POST',
                 data: {
                     email: email,
@@ -34,7 +34,7 @@ export default Controller.extend({
             alert('test');
           console.log(this);
           $.ajax({
-            url: 'http://localhost:8000/api/v1/users',
+            url: 'http://gudetama.local:8000/api/v1/users',
               method: 'GET',
               data: {
                 userid: this.userid,

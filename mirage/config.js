@@ -71,7 +71,7 @@ export default function() {
   //   }
   // ];
 
-  // this.get('http://localhost:8000/api/v1/products', function(db, request) {
+  // this.get('http://gudetama.local:8000/api/v1/products', function(db, request) {
   //   if (request.queryParams.title !== undefined) {
   //     let filteredProducts = products.filter(function (i) {
   //       return i.attributes.title.toLowerCase().indexOf(request.queryParams.title.toLowerCase()) !== -1;

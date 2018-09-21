@@ -6,11 +6,12 @@ export default Component.extend({
 	  var id = this.attrs.user.userid;
 	  console.log(this.attrs.user.userid);
       $.ajax({
-        url: 'http://localhost:8000/api/v1/user/' + id,
+        url: 'http://gudetama.local:8000/api/v1/users/' + id,
           type: 'DELETE',
           contentType: "application/x-www-form-urlencoded",
           success: function(data) {
             alert('delete successful');
+            window.location.replace("/users/");
           }
       });
     }
