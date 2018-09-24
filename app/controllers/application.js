@@ -31,7 +31,6 @@ export default Controller.extend({
             });
         },
         populateUsers: function() {
-            alert('test');
           console.log(this);
           $.ajax({
             url: 'http://gudetama.local:8000/api/v1/users',
