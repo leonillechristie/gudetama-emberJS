@@ -565,3 +565,9 @@ p {
 .contact-header-h {
     margin-top: 25px!important;
 }
+
+/* UI Enhancements */
+
+.pointer-btn {
+    cursor: pointer;
+}
