@@ -16,17 +16,17 @@ export default Controller.extend({
             	url: 'http://gudetama.local:8000/api/v1/login/',
                 method: 'POST',
                 data: {
-                    email: email,
-                    password: password
+                  email: email,
+                  password: password
                 },
                 contentType: "application/x-www-form-urlencoded",
                 success: function(response) {
-                    if (!response) {
-                        alert("Invalid Username/Password!");
-                    }else {
-                        alert("Login successful!");
-                        window.location.replace("/products");
-                    }
+                  if (response.authenticated == false) {
+                      alert("Invalid Username/Password!");
+                  }else {
+                      alert("Login Successful!");
+                      window.location.replace("/products");
+                  }
                 }
             });
         },
