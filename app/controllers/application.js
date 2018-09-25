@@ -24,7 +24,7 @@ export default Controller.extend({
                     if (!response) {
                         alert("Invalid Username/Password!");
                     }else {
-                        alert("Login Successful!");
+                        alert("Login successful!");
                         window.location.replace("/products");
                     }
                 }
