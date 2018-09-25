@@ -24,8 +24,6 @@ export default Controller.extend({
               window.location.replace("/products");
               var logModal = document.getElementById("loginModal");
               $(logModal).hide();
-              // document.getElementById("loginModal").style.visibility = "hidden";
-              // document.getElementById("loginModal").style.display = "none";
             }else {
               alert("Invalid Username/Password!");
             }
