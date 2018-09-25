@@ -21,5 +21,4 @@ module('Integration | Component | user-listing', function(hooks) {
     assert.equal(this.element.querySelector('.listing h3').textContent.trim(), 'test-title', 'Title: test-title');
     assert.equal(this.element.querySelector('.listing .id').textContent.trim(), 'id: test-id', 'id: test-id');
   });
-
 });

@@ -7,8 +7,6 @@ import hbs from 'htmlbars-inline-precompile';
 const StubMapsService = Service.extend({
   getMapElement(location) {
     this.set('calledWithLocation', location);
-    // We create a div here to simulate our maps service,
-    // which will create and then cache the map element
     return document.createElement('div');
   }
 });

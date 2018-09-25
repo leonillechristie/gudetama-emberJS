@@ -35,9 +35,7 @@ module('Integration | Component | product-listing', function(hooks) {
       {{/list-filter}}
     `);
 
-    // fill in the input field with 's'
     await fillIn(this.element.querySelector('.list-filter input'),'s');
-    // keyup event to invoke an action that will cause the list to be filtered
     await triggerKeyEvent(this.element.querySelector('.list-filter input'), "keyup", 83);
 
     return settled().then(() => {

@@ -11,13 +11,7 @@ module('Integration | Component | rental-listing', function(hooks) {
   setupRenderingTest(hooks);
 
   test('should initially load all listings', async function (assert) {
-    // we want our actions to return promises,
-    //since they are potentially fetching data asynchronously
     this.set('filterByName', () => resolve({ results: ITEMS }));
-
-    // with an integration test,
-    // you can set up and use your component in the same way your application
-    // will use it.
     await render(hbs`
       {{#list-filter filter=(action filterByName) as |results|}}
         <ul>
@@ -36,6 +30,3 @@ module('Integration | Component | rental-listing', function(hooks) {
     });
   });
 });
-
-
-
