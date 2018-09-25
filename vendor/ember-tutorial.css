@@ -571,3 +571,22 @@ p {
 .pointer-btn {
     cursor: pointer;
 }
+
+.add-u-btn {
+    margin-left: 120px; 
+    margin-right: 10px; 
+    margin-top: 15px; 
+    font-size: 14.5px!important;
+}
+
+.u-alc {
+    text-align:center;
+}
+
+.create-div {
+    padding: 0px 50px!important;
+}
+
+.footer-div {
+    margin-bottom: 100px;
+}
