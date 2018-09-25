@@ -26,6 +26,12 @@ export default Controller.extend({
                   }else {
                       alert("Login Successful!");
                       window.location.replace("/products");
+                      var x = document.getElementById("loginModal");
+                      if (x.style.display === "none") {
+                          x.style.display = "block";
+                      } else {
+                          x.style.display = "none";
+                      }
                   }
                 }
             });
