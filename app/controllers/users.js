@@ -2,7 +2,6 @@ import Controller from '@ember/controller';
 
 export default Controller.extend({
   initialize() {
-    console.log(this);
   },
   actions: {
     filterByName(param) {
