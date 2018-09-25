@@ -22,17 +22,17 @@ export default Controller.extend({
 
       $.ajax({
         url: 'http://gudetama.local:8000/api/v1/users/',
-          method: 'POST',
-          data: {
-              name: name,
-              email: email,
-              avatar: avatar
-          },
-          contentType: "application/x-www-form-urlencoded",
-          success: function(response) {
-            alert("User Created Successfully!");
-            window.location.replace("/users/");
-          }
+        method: 'POST',
+        data: {
+          name: name,
+          email: email,
+          avatar: avatar
+        },
+        contentType: "application/x-www-form-urlencoded",
+        success: function(response) {
+          alert("User Created Successfully!");
+          window.location.replace("/users/");
+        }
       });
     }
   }
