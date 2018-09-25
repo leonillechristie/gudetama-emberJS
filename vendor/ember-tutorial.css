@@ -590,3 +590,14 @@ p {
 .footer-div {
     margin-bottom: 100px;
 }
+
+.prod-search {
+    align-self: center; 
+    padding-right: 25px;
+}
+
+.search-div2 {
+    display: inline-flex;
+    margin-left: 25%;
+}
+
