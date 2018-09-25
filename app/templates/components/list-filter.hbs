@@ -1,9 +1,9 @@
-<div class="row" style="display:  inline-flex;margin-left: 25%;">
-    <h4 style="align-self: center; padding-right: 25px;"> Product Search: </h4>
+<div class="row search-div2">
+    <h4 class="prod-search"> Product Search: </h4>
     {{input value=value
-        key-up=(action 'handleFilterEntry')
-        class="light ember-rad" style="margin: 0px!important;"
-        placeholder="Input item to search"}}
+    key-up=(action 'handleFilterEntry')
+    class="light ember-rad" style="margin: 0px!important;"
+    placeholder="Input item to search"}}
 </div>
 
 {{yield results}}
