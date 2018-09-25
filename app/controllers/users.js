@@ -49,9 +49,9 @@ export default Controller.extend({
         url: 'http://gudetama.local:8000/api/v1/users/',
           method: 'POST',
           data: {
-              name: name,
-              email: email,
-              avatar: avatar
+            name: name,
+            email: email,
+            avatar: avatar
           },
           contentType: "application/x-www-form-urlencoded",
           success: function(response) {

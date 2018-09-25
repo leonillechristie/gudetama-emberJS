@@ -5,14 +5,14 @@ export default Controller.extend({
     filterByTitle(param) {
       if (param !== '') {
         return this.store
-          .query('product', { title: param }).then((results) => {
-            return { query: param, results: results };
-          });
+        .query('product', { title: param }).then((results) => {
+          return { query: param, results: results };
+        });
       } else {
         return this.store
-          .findAll('product').then((results) => {
-            return { query: param, results: results };
-          });
+        .findAll('product').then((results) => {
+          return { query: param, results: results };
+        });
       }
     },
     addCart: function() {
