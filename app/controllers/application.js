@@ -19,13 +19,15 @@ export default Controller.extend({
           },
           contentType: "application/x-www-form-urlencoded",
           success: function(response) {
-            if (response.authenticated == false) {
-              alert("Invalid Username/Password!");
-            }else {
+            if (response.authenticated == true) {
               alert("Login Successful!");
               window.location.replace("/products");
-              var x = document.getElementById("loginModal");
-              x.hide();
+              var logModal = document.getElementById("loginModal");
+              $(logModal).hide();
+              // document.getElementById("loginModal").style.visibility = "hidden";
+              // document.getElementById("loginModal").style.display = "none";
+            }else {
+              alert("Invalid Username/Password!");
             }
           }
       });

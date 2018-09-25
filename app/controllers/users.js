@@ -2,19 +2,20 @@ import Controller from '@ember/controller';
 
 export default Controller.extend({
   initialize() {
+    console.log(this);
   },
   actions: {
     filterByName(param) {
       if (param !== '') {
         return this.store
-        .query('user', { name: param }).then((results) => {
-          return { query: param, results: results };
-        });
+          .query('user', { name: param }).then((results) => {
+            return { query: param, results: results };
+          });
       } else {
         return this.store
-        .findAll('user').then((results) => {
-          return { query: param, results: results };
-        });
+          .findAll('user').then((results) => {
+            return { query: param, results: results };
+          });
       }
     },
     updateUser: function() {
@@ -24,16 +25,16 @@ export default Controller.extend({
 
       $.ajax({
         url: 'http://gudetama.local:8000/api/v1/users/'+ id,
-        method: 'PUT',
-        data: {
-          name: name,
-          email: email
-        },
-        contentType: "application/x-www-form-urlencoded",
-        success: function(response) {
-          alert("Update Successful!");
-          window.location.replace("/users/" + id);
-        }
+          method: 'PUT',
+          data: {
+              name: name,
+              email: email
+          },
+          contentType: "application/x-www-form-urlencoded",
+          success: function(response) {
+            alert("Update Successful!");
+            window.location.replace("/users/" + id);
+          }
       });
     },
     addUser: function() {
@@ -43,17 +44,17 @@ export default Controller.extend({
 
       $.ajax({
         url: 'http://gudetama.local:8000/api/v1/users/',
-        method: 'POST',
-        data: {
-          name: name,
-          email: email,
-          avatar: avatar
-        },
-        contentType: "application/x-www-form-urlencoded",
-        success: function(response) {
-          alert("User Created Successfully!");
-          window.location.replace("/users/");
-        }
+          method: 'POST',
+          data: {
+            name: name,
+            email: email,
+            avatar: avatar
+          },
+          contentType: "application/x-www-form-urlencoded",
+          success: function(response) {
+            alert("User Created Successfully!");
+            window.location.replace("/users/");
+          }
       });
     }
   }
