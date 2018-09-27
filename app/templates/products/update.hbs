@@ -1,0 +1,70 @@
+<div class="jumbo update-listing show-u-div">
+    <h2 style="padding-left: 50px;" class="title">Product Information</h2>
+    <div class="right detail-section mg-300">
+        <div class="detail owner">
+	        <div class="row mb-detail detail-box">
+				<h5 class="user-label">Title: </h5> 
+				<input class="update-input" id="title" type="text" value={{model.title}}>
+			</div>
+		</div>
+        <div class="detail">
+            <div class="row mb-detail detail-box">
+				<h5 class="user-label">Item Owner: </h5> 
+            	<input class="update-input" id="owner" type="text" value={{model.owner}}>
+            </div>
+        </div>
+        <div class="detail">
+            <div class="row mb-detail detail-box">
+				<h5 class="user-label">Category: </h5> 
+            	<input class="update-input" id="category" type="text" value={{model.category}}>
+            </div>
+        </div>
+        <div class="detail">
+            <div class="row mb-detail detail-box">
+				<h5 class="user-label">Item Origin: </h5> 
+            	<input class="update-input" id="city" type="text" value={{model.city}}>
+            </div>
+        </div>
+        <div class="detail">
+            <div class="row mb-detail detail-box">
+				<h5 class="user-label">Item Price: </h5> 
+            	<input class="update-input" id="price" type="number" value={{model.price}}>
+            </div>
+        </div>
+        <div class="detail">
+            <div class="row mb-detail detail-box">
+				<h5 class="user-label">Item Price: </h5> 
+            	<textarea class="update-input" style="resize:none;overflow:hidden;" id="description" value={{model.description}}></textarea>
+            </div>
+        </div>
+        <div class="detail">
+            <div class="row mb-detail detail-box">
+                <h5 class="user-label">Change Image: </h5> 
+                <input class="update-input" id="image" type="text" value={{model.image}}>
+            </div>
+        </div>
+
+       {{#link-to "products" class="button btn-update btn-nohover" style="color:yellow!important;"}}
+            Back to List
+        {{/link-to}}
+
+        <button class="button btn-update" style="margin-right: 20px;" {{ action 'updateProduct' }}> Update </button>
+    </div>
+</div>
+<img src="{{model.image}}" class="user-pic">
+<br><br>
+
+<div style="margin-bottom: 100px;"></div>
+
+<div class="">
+    <div class="menu footer-cust">
+        <div class="links">
+            <p class="footer-c">Copyright 2018</p>
+        </div>
+        {{#link-to "landing"}}
+            <h1>
+                <em>Gudetama Store</em>
+            </h1>
+        {{/link-to}}
+    </div>
+</div>
