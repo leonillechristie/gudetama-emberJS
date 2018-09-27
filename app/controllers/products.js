@@ -34,6 +34,39 @@ export default Controller.extend({
           window.location.replace("/users/");
         }
       });
-    }
+    },
+    updateProduct: function() {
+      var id = this.model.id;
+
+      console.log(this.model.id);
+      
+      var title = document.getElementById('title').value;
+      var owner = document.getElementById('owner').value;
+      var image = document.getElementById('image').value;
+      var category = document.getElementById('category').value;
+      var city = document.getElementById('city').value;
+      var price = document.getElementById('price').value;
+      var description = document.getElementById('description').value;
+
+      $.ajax({
+        url: 'http://gudetama.local:8000/api/v1/products/'+ id,
+          method: 'PUT',
+          data: {
+              title: title,
+              owner: owner,
+              image: image,
+              owner: owner,
+              category: category,
+              city: city,
+              price: price,
+              description: description
+          },
+          contentType: "application/x-www-form-urlencoded",
+          success: function(response) {
+            alert("Successfully updated product!");
+            window.location.replace("/products/" + id);
+          }
+      });
+    },
   }
 });

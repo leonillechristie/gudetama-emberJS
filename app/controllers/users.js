@@ -22,7 +22,6 @@ export default Controller.extend({
       var id = this.model.userid;
       var name = document.getElementById('name').value;
       var email = document.getElementById('email').value;
-
       $.ajax({
         url: 'http://gudetama.local:8000/api/v1/users/'+ id,
           method: 'PUT',
@@ -41,7 +40,6 @@ export default Controller.extend({
       var name = document.getElementById('newName').value;
       var email = document.getElementById('newEmail').value;
       var avatar = document.getElementById('newAvatar').value;
-
       $.ajax({
         url: 'http://gudetama.local:8000/api/v1/users/',
           method: 'POST',
