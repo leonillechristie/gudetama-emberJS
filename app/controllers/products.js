@@ -37,9 +37,8 @@ export default Controller.extend({
     },
     updateProduct: function() {
       var id = this.model.id;
-
       console.log(this.model.id);
-      
+
       var title = document.getElementById('title').value;
       var owner = document.getElementById('owner').value;
       var image = document.getElementById('image').value;
