@@ -18,10 +18,10 @@
         <span>Description:</span> {{product.owner}}
     </div>
     <div class="detail bedrooms">
-        {{#link-to "products.show" product}}<button class="button" style="position: absolute; cursor: pointer!important; right: 20%;top: 40%;">View Item</button>{{/link-to}}
-        <button class="button del-btn" style="position: absolute!important; right: 450px!important; bottom: 53px!important; background-color: #9a2b2b!important; cursor: pointer;" {{ action 'destroy' }} >Delete</button>
+        {{#link-to "products.show" product}}<button class="button gr-btn" style="position: absolute; cursor: pointer!important; right: 20%;top: 40%;">View Item</button>{{/link-to}}
+        {{#link-to "products.update" product}}<button class="button pointer-btn" style="position: absolute!important; right: 450px!important; bottom: 54px!important; cursor: pointer;">Update</button>{{/link-to}}
+        <button class="button del-btn" style="right: 196px; background-color: #9a2b2b!important; position: absolute; bottom: 54px;"{{ action 'destroy' }} >Delete</button>
     </div>
-
 </article>
 
 <br><br>
