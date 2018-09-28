@@ -1,5 +1,5 @@
 import Controller from '@ember/controller';
-
+import Application from '@ember/application';
 export default Controller.extend({
   router: Ember.inject.service(),
   actions: {
