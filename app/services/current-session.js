@@ -10,8 +10,8 @@ import Ember from 'ember';
 //       this._super(...arguments);
 //       // app.deferReadiness();
 //       this.loadCurrentUser(); //if you are not calling loadCurrentUser method then this will ensure username and isLoggedIn set properly
-        
 //     },
+
 export function initialize(container, application) {
   application.deferReadiness();
   var session = container.lookup('service:session');
@@ -72,6 +72,7 @@ export function initialize(container, application) {
     application.advanceReadiness();
  }
 }
+
 // export default Ember.Application.initializer({
 //     name: 'loadUser',
 //     after: 'store',
