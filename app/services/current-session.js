@@ -146,9 +146,9 @@ export default Ember.Service.extend({
             success: function(response) {
                 vm.set('user', response.data);
                 vm.set('isLoggedIn', true);
-                alert(response.data.name + " is logged in");
                 // console.log(response.data.name);
                 resolve();
+                alert(response.data.name + " is logged in");
             },
             error: function() {
               $.ajax({
