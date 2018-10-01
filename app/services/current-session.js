@@ -173,7 +173,7 @@ export default Ember.Service.extend({
                     reject();
                   }
               });
-              alert("Session Expired!");
+              alert("Session Expired! Please re-login.");
               window.location = '/landing';
             }
         });
