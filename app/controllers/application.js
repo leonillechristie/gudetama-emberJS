@@ -29,6 +29,9 @@ export default Controller.extend({
             localStorage.setItem('access_token', response.access_token);
             localStorage.setItem('refresh_token', response.refresh_token);
             window.location = '/products';
+          },
+          error: function() {
+            alert("Invalid user credentials.");
           }
       });
     },
