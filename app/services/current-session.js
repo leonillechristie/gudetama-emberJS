@@ -146,7 +146,6 @@ export default Ember.Service.extend({
             success: function(response) {
                 vm.set('user', response.data);
                 vm.set('isLoggedIn', true);
-                // console.log(response.data.name);
                 resolve();
                 alert(response.data.name + " is logged in");
             },
@@ -171,13 +170,11 @@ export default Ember.Service.extend({
                     resolve();
                   },
                   error: function() {
-                    alert("Invalid Login Credentials!");
-                    console.log("failed");
                     reject();
                   }
               });
-              alert("Invalid Login Credentials!");
-              console.log("failed2");
+              alert("Session Expired!");
+              window.location = '/landing';
             }
         });
       } else {
